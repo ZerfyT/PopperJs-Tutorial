@@ -1,0 +1,67 @@
+#app {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+#app > div,
+button {
+    width: 100%;
+    border: 1px solid #c2c2c2;
+    border-radius: 4px;
+}
+
+#app > div {
+    padding: 4px;
+}
+
+button {
+    padding: 8px 16px;
+    cursor: pointer;
+    background-color: white;
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+button:hover {
+    background-color: #333;
+    color: white;
+}
+
+.tooltip,
+.tooltip-arrow {
+    position: absolute;
+    background-color: #2e2e2e;
+}
+
+.tooltip {
+    top: 0;
+    left: 0;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    visibility: hidden;
+    z-index: 1;
+}
+
+.tooltip-arrow {
+    transform: rotate(45deg);
+    width: 8px;
+    height: 8px;
+}
+
+
+/* Media queries */
+
+@media (max-width: 576px) {
+    #app {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+}
